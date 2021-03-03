@@ -6,13 +6,13 @@
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 10:35:03 by rbraaksm      #+#    #+#                 */
-/*   Updated: 2019/11/05 10:35:06 by rbraaksm      ########   odam.nl         */
+/*   Updated: 2021/03/03 13:02:14 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static char		*ft_fill_str(char *new_str, int size, int n)
+static char	*ft_fill_str(char *new_str, int size, int n)
 {
 	char		*tmp;
 
@@ -37,7 +37,7 @@ static char		*ft_fill_str(char *new_str, int size, int n)
 	return (tmp);
 }
 
-static int		ft_size(int n)
+static int	ft_size(int n)
 {
 	int			size;
 
@@ -52,7 +52,7 @@ static int		ft_size(int n)
 	return (size);
 }
 
-static char		*ft_minvalue(char *str, int n)
+static char	*ft_minvalue(char *str, int n)
 {
 	char		*new_str;
 	int			size;
@@ -72,7 +72,7 @@ static char		*ft_minvalue(char *str, int n)
 	return (new_str);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*new_str;
 	int			size;
@@ -81,14 +81,14 @@ char			*ft_itoa(int n)
 	num = n;
 	if (n == -2147483648)
 	{
-		new_str = (char*)malloc(sizeof(char) * 11 + 1);
+		new_str = (char *)malloc(sizeof(char) * (11 + 1));
 		new_str = ft_minvalue(new_str, n);
 		return (new_str);
 	}
 	size = ft_size(n);
 	if (num == 0)
 		size = 1;
-	new_str = (char*)malloc(sizeof(char) * size + 1);
+	new_str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!new_str)
 		return (NULL);
 	if (n == 0)

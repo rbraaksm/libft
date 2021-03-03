@@ -6,13 +6,13 @@
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/04 13:50:06 by rbraaksm      #+#    #+#                 */
-/*   Updated: 2019/11/04 13:50:13 by rbraaksm      ########   odam.nl         */
+/*   Updated: 2021/03/03 13:04:52 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static int		ft_count_words(char *s, char c)
+static int	ft_count_words(char *s, char c)
 {
 	int		count;
 	int		index;
@@ -28,7 +28,7 @@ static int		ft_count_words(char *s, char c)
 	return (count);
 }
 
-static char		*word_malloc(char const *s, int c)
+static char	*word_malloc(char const *s, int c)
 {
 	char	*new_str;
 	int		index;
@@ -47,7 +47,7 @@ static char		*word_malloc(char const *s, int c)
 	return (new_str);
 }
 
-static int		ft_free(char **array, int words)
+static int	ft_free(char **array, int words)
 {
 	while (words >= 0)
 	{
@@ -58,7 +58,7 @@ static int		ft_free(char **array, int words)
 	return (0);
 }
 
-static int		ft_fill(char *s, char **new_arr, char c)
+static int	ft_fill(char *s, char **new_arr, char c)
 {
 	int		i;
 
@@ -69,7 +69,7 @@ static int		ft_fill(char *s, char **new_arr, char c)
 			s++;
 		if (*s && *s != c)
 		{
-			new_arr[i] = word_malloc((char*)s, c);
+			new_arr[i] = word_malloc((char *)s, c);
 			if (!new_arr[i])
 				return (ft_free(new_arr, i - 1));
 			i++;
@@ -80,7 +80,7 @@ static int		ft_fill(char *s, char **new_arr, char c)
 	return (1);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**new_arr;
 	int		words;
@@ -89,13 +89,13 @@ char			**ft_split(char const *s, char c)
 	succes = 0;
 	if (!s)
 		return (NULL);
-	words = ft_count_words((char*)s, c);
-	new_arr = (char **)malloc(sizeof(char*) * (words + 1));
+	words = ft_count_words((char *)s, c);
+	new_arr = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!new_arr)
 		return (NULL);
-	succes = ft_fill((char*)s, new_arr, c);
+	succes = ft_fill((char *)s, new_arr, c);
 	if (succes == 0)
 		return (NULL);
-	new_arr[words] = ((void*)0);
+	new_arr[words] = ((void *) 0);
 	return (new_arr);
 }

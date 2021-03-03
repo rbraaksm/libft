@@ -6,11 +6,11 @@
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/30 15:45:31 by rbraaksm      #+#    #+#                 */
-/*   Updated: 2019/10/30 15:45:32 by rbraaksm      ########   odam.nl         */
+/*   Updated: 2021/03/03 13:00:00 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);

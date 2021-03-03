@@ -6,11 +6,11 @@
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/30 16:09:54 by rbraaksm      #+#    #+#                 */
-/*   Updated: 2019/10/30 16:09:56 by rbraaksm      ########   odam.nl         */
+/*   Updated: 2021/03/03 13:03:04 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

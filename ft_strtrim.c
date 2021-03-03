@@ -6,14 +6,14 @@
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/04 10:22:33 by rbraaksm      #+#    #+#                 */
-/*   Updated: 2019/11/04 10:22:36 by rbraaksm      ########   odam.nl         */
+/*   Updated: 2021/03/03 13:03:21 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char		*newstr;
 	int			i;

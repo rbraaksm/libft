@@ -6,11 +6,11 @@
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/30 15:52:06 by rbraaksm      #+#    #+#                 */
-/*   Updated: 2019/10/30 15:52:08 by rbraaksm      ########   odam.nl         */
+/*   Updated: 2021/03/03 13:00:16 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

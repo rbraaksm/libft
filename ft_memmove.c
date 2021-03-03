@@ -6,7 +6,7 @@
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 12:16:00 by rbraaksm      #+#    #+#                 */
-/*   Updated: 2019/11/01 12:01:24 by rbraaksm      ########   odam.nl         */
+/*   Updated: 2021/03/03 13:07:21 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			ptr1[i] = ptr2[i];
 			i++;
 		}
+		return (dst);
 	}
-	else
-		while (len > 0)
-		{
-			len--;
-			ptr1[len] = ptr2[len];
-		}
+	while (len > 0)
+	{
+		len--;
+		ptr1[len] = ptr2[len];
+	}
 	return (dst);
 }
